@@ -1,0 +1,1782 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Google.Apis.DeploymentManager.v2</name>
+    </assembly>
+    <members>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentManagerService">
+            <summary>The DeploymentManager Service.</summary>
+        </member>
+        <member name="F:Google.Apis.DeploymentManager.v2.DeploymentManagerService.Version">
+            <summary>The API version.</summary>
+        </member>
+        <member name="F:Google.Apis.DeploymentManager.v2.DeploymentManagerService.DiscoveryVersionUsed">
+            <summary>The discovery version used to generate this service.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentManagerService.#ctor">
+            <summary>Constructs a new service.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentManagerService.#ctor(Google.Apis.Services.BaseClientService.Initializer)">
+            <summary>Constructs a new service.</summary>
+            <param name="initializer">The service initializer.</param>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerService.Features">
+            <summary>Gets the service supported features.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerService.Name">
+            <summary>Gets the service name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerService.BaseUri">
+            <summary>Gets the service base URI.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerService.BasePath">
+            <summary>Gets the service base path.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerService.BatchUri">
+            <summary>Gets the batch base URI; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerService.BatchPath">
+            <summary>Gets the batch base path; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentManagerService.Scope">
+            <summary>Available OAuth 2.0 scopes for use with the Google Cloud Deployment Manager API.</summary>
+        </member>
+        <member name="F:Google.Apis.DeploymentManager.v2.DeploymentManagerService.Scope.CloudPlatform">
+            <summary>View and manage your data across Google Cloud Platform services</summary>
+        </member>
+        <member name="F:Google.Apis.DeploymentManager.v2.DeploymentManagerService.Scope.CloudPlatformReadOnly">
+            <summary>View your data across Google Cloud Platform services</summary>
+        </member>
+        <member name="F:Google.Apis.DeploymentManager.v2.DeploymentManagerService.Scope.NdevCloudman">
+            <summary>View and manage your Google Cloud Platform management resources and deployment status
+            information</summary>
+        </member>
+        <member name="F:Google.Apis.DeploymentManager.v2.DeploymentManagerService.Scope.NdevCloudmanReadonly">
+            <summary>View your Google Cloud Platform management resources and deployment status
+            information</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentManagerService.ScopeConstants">
+            <summary>Available OAuth 2.0 scope constants for use with the Google Cloud Deployment Manager API.</summary>
+        </member>
+        <member name="F:Google.Apis.DeploymentManager.v2.DeploymentManagerService.ScopeConstants.CloudPlatform">
+            <summary>View and manage your data across Google Cloud Platform services</summary>
+        </member>
+        <member name="F:Google.Apis.DeploymentManager.v2.DeploymentManagerService.ScopeConstants.CloudPlatformReadOnly">
+            <summary>View your data across Google Cloud Platform services</summary>
+        </member>
+        <member name="F:Google.Apis.DeploymentManager.v2.DeploymentManagerService.ScopeConstants.NdevCloudman">
+            <summary>View and manage your Google Cloud Platform management resources and deployment status
+            information</summary>
+        </member>
+        <member name="F:Google.Apis.DeploymentManager.v2.DeploymentManagerService.ScopeConstants.NdevCloudmanReadonly">
+            <summary>View your Google Cloud Platform management resources and deployment status
+            information</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerService.Deployments">
+            <summary>Gets the Deployments resource.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerService.Manifests">
+            <summary>Gets the Manifests resource.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerService.Operations">
+            <summary>Gets the Operations resource.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerService.Resources">
+            <summary>Gets the Resources resource.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerService.Types">
+            <summary>Gets the Types resource.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentManagerBaseServiceRequest`1">
+            <summary>A base abstract class for DeploymentManager requests.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentManagerBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new DeploymentManagerBaseServiceRequest instance.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerBaseServiceRequest`1.Alt">
+            <summary>Data format for the response.</summary>
+            [default: json]
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentManagerBaseServiceRequest`1.AltEnum">
+            <summary>Data format for the response.</summary>
+        </member>
+        <member name="F:Google.Apis.DeploymentManager.v2.DeploymentManagerBaseServiceRequest`1.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerBaseServiceRequest`1.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerBaseServiceRequest`1.Key">
+            <summary>API key. Your API key identifies your project and provides you with API access, quota, and reports.
+            Required unless you provide an OAuth 2.0 token.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerBaseServiceRequest`1.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerBaseServiceRequest`1.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerBaseServiceRequest`1.QuotaUser">
+            <summary>An opaque string that represents a user for quota purposes. Must not exceed 40
+            characters.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentManagerBaseServiceRequest`1.UserIp">
+            <summary>Deprecated. Please use quotaUser instead.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentManagerBaseServiceRequest`1.InitParameters">
+            <summary>Initializes DeploymentManager parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource">
+            <summary>The "deployments" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.DeploymentManager.v2.DeploymentsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.CancelPreview(Google.Apis.DeploymentManager.v2.Data.DeploymentsCancelPreviewRequest,System.String,System.String)">
+            <summary>Cancels and removes the preview currently associated with the deployment.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">The project ID for this request.</param>
+            <param name="deployment">The name of the
+            deployment for this request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.CancelPreviewRequest">
+            <summary>Cancels and removes the preview currently associated with the deployment.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.CancelPreviewRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.DeploymentManager.v2.Data.DeploymentsCancelPreviewRequest,System.String,System.String)">
+            <summary>Constructs a new CancelPreview request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.CancelPreviewRequest.Project">
+            <summary>The project ID for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.CancelPreviewRequest.Deployment">
+            <summary>The name of the deployment for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.CancelPreviewRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.CancelPreviewRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.CancelPreviewRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.CancelPreviewRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.CancelPreviewRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.CancelPreviewRequest.InitParameters">
+            <summary>Initializes CancelPreview parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.Delete(System.String,System.String)">
+            <summary>Deletes a deployment and all of the resources in the deployment.</summary>
+            <param name="project">The project ID for this request.</param>
+            <param name="deployment">The name of the
+            deployment for this request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.DeleteRequest">
+            <summary>Deletes a deployment and all of the resources in the deployment.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.DeleteRequest.Project">
+            <summary>The project ID for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.DeleteRequest.Deployment">
+            <summary>The name of the deployment for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.DeleteRequest.DeletePolicy">
+            <summary>Sets the policy to use for deleting resources.</summary>
+            [default: DELETE]
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.DeleteRequest.DeletePolicyEnum">
+            <summary>Sets the policy to use for deleting resources.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.Get(System.String,System.String)">
+            <summary>Gets information about a specific deployment.</summary>
+            <param name="project">The project ID for this request.</param>
+            <param name="deployment">The name of the
+            deployment for this request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetRequest">
+            <summary>Gets information about a specific deployment.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetRequest.Project">
+            <summary>The project ID for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetRequest.Deployment">
+            <summary>The name of the deployment for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetIamPolicy(System.String,System.String)">
+            <summary>Gets the access control policy for a resource. May be empty if no such policy or resource
+            exists.</summary>
+            <param name="project">Project ID for this request.</param>
+            <param name="resource">Name or id of the resource
+            for this request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetIamPolicyRequest">
+            <summary>Gets the access control policy for a resource. May be empty if no such policy or resource
+            exists.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new GetIamPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetIamPolicyRequest.Project">
+            <summary>Project ID for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetIamPolicyRequest.Resource">
+            <summary>Name or id of the resource for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetIamPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetIamPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetIamPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.GetIamPolicyRequest.InitParameters">
+            <summary>Initializes GetIamPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.Insert(Google.Apis.DeploymentManager.v2.Data.Deployment,System.String)">
+            <summary>Creates a deployment and all of the resources described by the deployment manifest.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">The project ID for this request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.InsertRequest">
+            <summary>Creates a deployment and all of the resources described by the deployment manifest.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.DeploymentManager.v2.Data.Deployment,System.String)">
+            <summary>Constructs a new Insert request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.InsertRequest.Project">
+            <summary>The project ID for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.InsertRequest.CreatePolicy">
+            <summary>Sets the policy to use for creating new resources.</summary>
+            [default: CREATE_OR_ACQUIRE]
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.InsertRequest.CreatePolicyEnum">
+            <summary>Sets the policy to use for creating new resources.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.InsertRequest.Preview">
+            <summary>If set to true, creates a deployment and creates "shell" resources but does not actually
+            instantiate these resources. This allows you to preview what your deployment looks like. After
+            previewing a deployment, you can deploy your resources by making a request with the update() method or
+            you can use the cancelPreview() method to cancel the preview altogether. Note that the deployment will
+            still exist after you cancel the preview and you must separately delete this deployment if you want to
+            remove it.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.InsertRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.InsertRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.InsertRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.InsertRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.InsertRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.InsertRequest.InitParameters">
+            <summary>Initializes Insert parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.List(System.String)">
+            <summary>Lists all deployments for a given project.</summary>
+            <param name="project">The project ID for this request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.ListRequest">
+            <summary>Lists all deployments for a given project.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.ListRequest.Project">
+            <summary>The project ID for this request.</summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Google.Apis.DeploymentManager.v2.DeploymentsResource.ListRequest.Filter" -->
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.ListRequest.MaxResults">
+            <summary>The maximum number of results per page that should be returned. If the number of available
+            results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the
+            next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default:
+            500)</summary>
+            [default: 500]
+            [minimum: 0]
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.ListRequest.OrderBy">
+             <summary>Sorts list results by a certain order. By default, results are returned in alphanumerical order
+             based on the resource name.
+            
+             You can also sort results in descending order based on the creation timestamp using
+             orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field in reverse
+             chronological order (newest result first). Use this to sort resources like operations so that the newest
+             operation is returned first.
+            
+             Currently, only sorting by name or creationTimestamp desc is supported.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.ListRequest.PageToken">
+            <summary>Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list
+            request to get the next page of results.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.Patch(Google.Apis.DeploymentManager.v2.Data.Deployment,System.String,System.String)">
+            <summary>Updates a deployment and all of the resources described by the deployment manifest. This method
+            supports patch semantics.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">The project ID for this request.</param>
+            <param name="deployment">The name of the
+            deployment for this request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.PatchRequest">
+            <summary>Updates a deployment and all of the resources described by the deployment manifest. This method
+            supports patch semantics.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.DeploymentManager.v2.Data.Deployment,System.String,System.String)">
+            <summary>Constructs a new Patch request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.PatchRequest.Project">
+            <summary>The project ID for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.PatchRequest.Deployment">
+            <summary>The name of the deployment for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.PatchRequest.CreatePolicy">
+            <summary>Sets the policy to use for creating new resources.</summary>
+            [default: CREATE_OR_ACQUIRE]
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.PatchRequest.CreatePolicyEnum">
+            <summary>Sets the policy to use for creating new resources.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.PatchRequest.DeletePolicy">
+            <summary>Sets the policy to use for deleting resources.</summary>
+            [default: DELETE]
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.PatchRequest.DeletePolicyEnum">
+            <summary>Sets the policy to use for deleting resources.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.PatchRequest.Preview">
+            <summary>If set to true, updates the deployment and creates and updates the "shell" resources but does
+            not actually alter or instantiate these resources. This allows you to preview what your deployment will
+            look like. You can use this intent to preview how an update would affect your deployment. You must
+            provide a target.config with a configuration if this is set to true. After previewing a deployment, you
+            can deploy your resources by making a request with the update() or you can cancelPreview() to remove the
+            preview altogether. Note that the deployment will still exist after you cancel the preview and you must
+            separately delete this deployment if you want to remove it.</summary>
+            [default: false]
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.PatchRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.PatchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.PatchRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.PatchRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.PatchRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.PatchRequest.InitParameters">
+            <summary>Initializes Patch parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.SetIamPolicy(Google.Apis.DeploymentManager.v2.Data.GlobalSetPolicyRequest,System.String,System.String)">
+            <summary>Sets the access control policy on the specified resource. Replaces any existing policy.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID for this request.</param>
+            <param name="resource">Name or id of the resource
+            for this request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.SetIamPolicyRequest">
+            <summary>Sets the access control policy on the specified resource. Replaces any existing policy.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.SetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.DeploymentManager.v2.Data.GlobalSetPolicyRequest,System.String,System.String)">
+            <summary>Constructs a new SetIamPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.SetIamPolicyRequest.Project">
+            <summary>Project ID for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.SetIamPolicyRequest.Resource">
+            <summary>Name or id of the resource for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.SetIamPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.SetIamPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.SetIamPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.SetIamPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.SetIamPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.SetIamPolicyRequest.InitParameters">
+            <summary>Initializes SetIamPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.Stop(Google.Apis.DeploymentManager.v2.Data.DeploymentsStopRequest,System.String,System.String)">
+            <summary>Stops an ongoing operation. This does not roll back any work that has already been completed, but
+            prevents any new work from being started.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">The project ID for this request.</param>
+            <param name="deployment">The name of the
+            deployment for this request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.StopRequest">
+            <summary>Stops an ongoing operation. This does not roll back any work that has already been completed, but
+            prevents any new work from being started.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.StopRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.DeploymentManager.v2.Data.DeploymentsStopRequest,System.String,System.String)">
+            <summary>Constructs a new Stop request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.StopRequest.Project">
+            <summary>The project ID for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.StopRequest.Deployment">
+            <summary>The name of the deployment for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.StopRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.StopRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.StopRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.StopRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.StopRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.StopRequest.InitParameters">
+            <summary>Initializes Stop parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.TestIamPermissions(Google.Apis.DeploymentManager.v2.Data.TestPermissionsRequest,System.String,System.String)">
+            <summary>Returns permissions that a caller has on the specified resource.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID for this request.</param>
+            <param name="resource">Name or id of the resource
+            for this request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.TestIamPermissionsRequest">
+            <summary>Returns permissions that a caller has on the specified resource.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.TestIamPermissionsRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.DeploymentManager.v2.Data.TestPermissionsRequest,System.String,System.String)">
+            <summary>Constructs a new TestIamPermissions request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.TestIamPermissionsRequest.Project">
+            <summary>Project ID for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.TestIamPermissionsRequest.Resource">
+            <summary>Name or id of the resource for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.TestIamPermissionsRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.TestIamPermissionsRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.TestIamPermissionsRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.TestIamPermissionsRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.TestIamPermissionsRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.TestIamPermissionsRequest.InitParameters">
+            <summary>Initializes TestIamPermissions parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.Update(Google.Apis.DeploymentManager.v2.Data.Deployment,System.String,System.String)">
+            <summary>Updates a deployment and all of the resources described by the deployment manifest.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">The project ID for this request.</param>
+            <param name="deployment">The name of the
+            deployment for this request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.UpdateRequest">
+            <summary>Updates a deployment and all of the resources described by the deployment manifest.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.DeploymentManager.v2.Data.Deployment,System.String,System.String)">
+            <summary>Constructs a new Update request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.UpdateRequest.Project">
+            <summary>The project ID for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.UpdateRequest.Deployment">
+            <summary>The name of the deployment for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.UpdateRequest.CreatePolicy">
+            <summary>Sets the policy to use for creating new resources.</summary>
+            [default: CREATE_OR_ACQUIRE]
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.UpdateRequest.CreatePolicyEnum">
+            <summary>Sets the policy to use for creating new resources.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.UpdateRequest.DeletePolicy">
+            <summary>Sets the policy to use for deleting resources.</summary>
+            [default: DELETE]
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.DeploymentsResource.UpdateRequest.DeletePolicyEnum">
+            <summary>Sets the policy to use for deleting resources.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.UpdateRequest.Preview">
+            <summary>If set to true, updates the deployment and creates and updates the "shell" resources but does
+            not actually alter or instantiate these resources. This allows you to preview what your deployment will
+            look like. You can use this intent to preview how an update would affect your deployment. You must
+            provide a target.config with a configuration if this is set to true. After previewing a deployment, you
+            can deploy your resources by making a request with the update() or you can cancelPreview() to remove the
+            preview altogether. Note that the deployment will still exist after you cancel the preview and you must
+            separately delete this deployment if you want to remove it.</summary>
+            [default: false]
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.UpdateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.UpdateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.UpdateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.UpdateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.DeploymentsResource.UpdateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.DeploymentsResource.UpdateRequest.InitParameters">
+            <summary>Initializes Update parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.ManifestsResource">
+            <summary>The "manifests" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.DeploymentManager.v2.ManifestsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.ManifestsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.ManifestsResource.Get(System.String,System.String,System.String)">
+            <summary>Gets information about a specific manifest.</summary>
+            <param name="project">The project ID for this request.</param>
+            <param name="deployment">The name of the
+            deployment for this request.</param>
+            <param name="manifest">The name of the manifest for this
+            request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.ManifestsResource.GetRequest">
+            <summary>Gets information about a specific manifest.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.ManifestsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ManifestsResource.GetRequest.Project">
+            <summary>The project ID for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ManifestsResource.GetRequest.Deployment">
+            <summary>The name of the deployment for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ManifestsResource.GetRequest.Manifest">
+            <summary>The name of the manifest for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ManifestsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ManifestsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ManifestsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.ManifestsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.ManifestsResource.List(System.String,System.String)">
+            <summary>Lists all manifests for a given deployment.</summary>
+            <param name="project">The project ID for this request.</param>
+            <param name="deployment">The name of the
+            deployment for this request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.ManifestsResource.ListRequest">
+            <summary>Lists all manifests for a given deployment.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.ManifestsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ManifestsResource.ListRequest.Project">
+            <summary>The project ID for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ManifestsResource.ListRequest.Deployment">
+            <summary>The name of the deployment for this request.</summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Google.Apis.DeploymentManager.v2.ManifestsResource.ListRequest.Filter" -->
+        <member name="P:Google.Apis.DeploymentManager.v2.ManifestsResource.ListRequest.MaxResults">
+            <summary>The maximum number of results per page that should be returned. If the number of available
+            results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the
+            next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default:
+            500)</summary>
+            [default: 500]
+            [minimum: 0]
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ManifestsResource.ListRequest.OrderBy">
+             <summary>Sorts list results by a certain order. By default, results are returned in alphanumerical order
+             based on the resource name.
+            
+             You can also sort results in descending order based on the creation timestamp using
+             orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field in reverse
+             chronological order (newest result first). Use this to sort resources like operations so that the newest
+             operation is returned first.
+            
+             Currently, only sorting by name or creationTimestamp desc is supported.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ManifestsResource.ListRequest.PageToken">
+            <summary>Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list
+            request to get the next page of results.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ManifestsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ManifestsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ManifestsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.ManifestsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.OperationsResource">
+            <summary>The "operations" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.DeploymentManager.v2.OperationsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.OperationsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.OperationsResource.Get(System.String,System.String)">
+            <summary>Gets information about a specific operation.</summary>
+            <param name="project">The project ID for this request.</param>
+            <param name="operation">The name of the
+            operation for this request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.OperationsResource.GetRequest">
+            <summary>Gets information about a specific operation.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.OperationsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.OperationsResource.GetRequest.Project">
+            <summary>The project ID for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.OperationsResource.GetRequest.Operation">
+            <summary>The name of the operation for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.OperationsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.OperationsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.OperationsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.OperationsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.OperationsResource.List(System.String)">
+            <summary>Lists all operations for a project.</summary>
+            <param name="project">The project ID for this request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.OperationsResource.ListRequest">
+            <summary>Lists all operations for a project.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.OperationsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.OperationsResource.ListRequest.Project">
+            <summary>The project ID for this request.</summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Google.Apis.DeploymentManager.v2.OperationsResource.ListRequest.Filter" -->
+        <member name="P:Google.Apis.DeploymentManager.v2.OperationsResource.ListRequest.MaxResults">
+            <summary>The maximum number of results per page that should be returned. If the number of available
+            results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the
+            next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default:
+            500)</summary>
+            [default: 500]
+            [minimum: 0]
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.OperationsResource.ListRequest.OrderBy">
+             <summary>Sorts list results by a certain order. By default, results are returned in alphanumerical order
+             based on the resource name.
+            
+             You can also sort results in descending order based on the creation timestamp using
+             orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field in reverse
+             chronological order (newest result first). Use this to sort resources like operations so that the newest
+             operation is returned first.
+            
+             Currently, only sorting by name or creationTimestamp desc is supported.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.OperationsResource.ListRequest.PageToken">
+            <summary>Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list
+            request to get the next page of results.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.OperationsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.OperationsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.OperationsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.OperationsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.ResourcesResource">
+            <summary>The "resources" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.DeploymentManager.v2.ResourcesResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.ResourcesResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.ResourcesResource.Get(System.String,System.String,System.String)">
+            <summary>Gets information about a single resource.</summary>
+            <param name="project">The project ID for this request.</param>
+            <param name="deployment">The name of the
+            deployment for this request.</param>
+            <param name="resource">The name of the resource for this
+            request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.ResourcesResource.GetRequest">
+            <summary>Gets information about a single resource.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.ResourcesResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ResourcesResource.GetRequest.Project">
+            <summary>The project ID for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ResourcesResource.GetRequest.Deployment">
+            <summary>The name of the deployment for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ResourcesResource.GetRequest.Resource">
+            <summary>The name of the resource for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ResourcesResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ResourcesResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ResourcesResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.ResourcesResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.ResourcesResource.List(System.String,System.String)">
+            <summary>Lists all resources in a given deployment.</summary>
+            <param name="project">The project ID for this request.</param>
+            <param name="deployment">The name of the
+            deployment for this request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.ResourcesResource.ListRequest">
+            <summary>Lists all resources in a given deployment.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.ResourcesResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ResourcesResource.ListRequest.Project">
+            <summary>The project ID for this request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ResourcesResource.ListRequest.Deployment">
+            <summary>The name of the deployment for this request.</summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Google.Apis.DeploymentManager.v2.ResourcesResource.ListRequest.Filter" -->
+        <member name="P:Google.Apis.DeploymentManager.v2.ResourcesResource.ListRequest.MaxResults">
+            <summary>The maximum number of results per page that should be returned. If the number of available
+            results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the
+            next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default:
+            500)</summary>
+            [default: 500]
+            [minimum: 0]
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ResourcesResource.ListRequest.OrderBy">
+             <summary>Sorts list results by a certain order. By default, results are returned in alphanumerical order
+             based on the resource name.
+            
+             You can also sort results in descending order based on the creation timestamp using
+             orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field in reverse
+             chronological order (newest result first). Use this to sort resources like operations so that the newest
+             operation is returned first.
+            
+             Currently, only sorting by name or creationTimestamp desc is supported.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ResourcesResource.ListRequest.PageToken">
+            <summary>Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list
+            request to get the next page of results.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ResourcesResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ResourcesResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.ResourcesResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.ResourcesResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.TypesResource">
+            <summary>The "types" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.DeploymentManager.v2.TypesResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.TypesResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.TypesResource.List(System.String)">
+            <summary>Lists all resource types for Deployment Manager.</summary>
+            <param name="project">The project ID for this request.</param>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.TypesResource.ListRequest">
+            <summary>Lists all resource types for Deployment Manager.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.TypesResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.TypesResource.ListRequest.Project">
+            <summary>The project ID for this request.</summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Google.Apis.DeploymentManager.v2.TypesResource.ListRequest.Filter" -->
+        <member name="P:Google.Apis.DeploymentManager.v2.TypesResource.ListRequest.MaxResults">
+            <summary>The maximum number of results per page that should be returned. If the number of available
+            results is larger than maxResults, Compute Engine returns a nextPageToken that can be used to get the
+            next page of results in subsequent list requests. Acceptable values are 0 to 500, inclusive. (Default:
+            500)</summary>
+            [default: 500]
+            [minimum: 0]
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.TypesResource.ListRequest.OrderBy">
+             <summary>Sorts list results by a certain order. By default, results are returned in alphanumerical order
+             based on the resource name.
+            
+             You can also sort results in descending order based on the creation timestamp using
+             orderBy="creationTimestamp desc". This sorts results based on the creationTimestamp field in reverse
+             chronological order (newest result first). Use this to sort resources like operations so that the newest
+             operation is returned first.
+            
+             Currently, only sorting by name or creationTimestamp desc is supported.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.TypesResource.ListRequest.PageToken">
+            <summary>Specifies a page token to use. Set pageToken to the nextPageToken returned by a previous list
+            request to get the next page of results.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.TypesResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.TypesResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.TypesResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.DeploymentManager.v2.TypesResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.AuditConfig">
+             <summary>Specifies the audit configuration for a service. The configuration determines which permission types
+             are logged, and what identities, if any, are exempted from logging. An AuditConfig must have one or more
+             AuditLogConfigs.
+            
+             If there are AuditConfigs for both `allServices` and a specific service, the union of the two AuditConfigs is
+             used for that service: the log_types specified in each AuditConfig are enabled, and the exempted_members in each
+             AuditLogConfig are exempted.
+            
+             Example Policy with multiple AuditConfigs:
+            
+             { "audit_configs": [ { "service": "allServices" "audit_log_configs": [ { "log_type": "DATA_READ",
+             "exempted_members": [ "user:foo@gmail.com" ] }, { "log_type": "DATA_WRITE", }, { "log_type": "ADMIN_READ", } ]
+             }, { "service": "fooservice.googleapis.com" "audit_log_configs": [ { "log_type": "DATA_READ", }, { "log_type":
+             "DATA_WRITE", "exempted_members": [ "user:bar@gmail.com" ] } ] } ] }
+            
+             For fooservice, this policy enables DATA_READ, DATA_WRITE and ADMIN_READ logging. It also exempts foo@gmail.com
+             from DATA_READ logging, and bar@gmail.com from DATA_WRITE logging.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.AuditConfig.AuditLogConfigs">
+            <summary>The configuration for logging of each type of permission.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.AuditConfig.Service">
+            <summary>Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`,
+            `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.AuditConfig.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.AuditLogConfig">
+             <summary>Provides the configuration for logging a type of permissions. Example:
+            
+             { "audit_log_configs": [ { "log_type": "DATA_READ", "exempted_members": [ "user:foo@gmail.com" ] }, {
+             "log_type": "DATA_WRITE", } ] }
+            
+             This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting foo@gmail.com from DATA_READ
+             logging.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.AuditLogConfig.ExemptedMembers">
+            <summary>Specifies the identities that do not cause logging for this type of permission. Follows the same
+            format of [Binding.members][].</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.AuditLogConfig.LogType">
+            <summary>The log type that this config enables.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.AuditLogConfig.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.AuthorizationLoggingOptions">
+            <summary>Authorization-related information used by Cloud Audit Logging.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.AuthorizationLoggingOptions.PermissionType">
+            <summary>The type of the permission that was checked.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.AuthorizationLoggingOptions.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.Binding">
+            <summary>Associates `members` with a `role`.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Binding.Condition">
+            <summary>Unimplemented. The condition that is associated with this binding. NOTE: an unsatisfied condition
+            will not allow user access via current binding. Different bindings, including their conditions, are examined
+            independently.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Binding.Members">
+             <summary>Specifies the identities requesting access for a Cloud Platform resource. `members` can have the
+             following values:
+            
+             * `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google
+             account.
+            
+             * `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google
+             account or a service account.
+            
+             * `user:{emailid}`: An email address that represents a specific Google account. For example,
+             `alice@gmail.com` .
+            
+             * `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-
+             app@appspot.gserviceaccount.com`.
+            
+             * `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`.
+            
+             * `domain:{domain}`: A Google Apps domain name that represents all the users of that domain. For example,
+             `google.com` or `example.com`.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Binding.Role">
+            <summary>Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`, or
+            `roles/owner`.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Binding.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.Condition">
+            <summary>A condition to be met.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Condition.Iam">
+            <summary>Trusted attributes supplied by the IAM system.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Condition.Op">
+            <summary>An operator to apply the subject with.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Condition.Svc">
+            <summary>Trusted attributes discharged by the service.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Condition.Sys">
+            <summary>Trusted attributes supplied by any service that owns resources and uses the IAM system for access
+            control.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Condition.Value">
+            <summary>DEPRECATED. Use 'values' instead.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Condition.Values">
+            <summary>The objects of the condition. This is mutually exclusive with 'value'.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Condition.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ConfigFile.Content">
+            <summary>The contents of the file.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ConfigFile.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Deployment.Description">
+            <summary>An optional user-provided description of the deployment.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Deployment.Fingerprint">
+             <summary>Provides a fingerprint to use in requests to modify a deployment, such as update(), stop(), and
+             cancelPreview() requests. A fingerprint is a randomly generated value that must be provided with update(),
+             stop(), and cancelPreview() requests to perform optimistic locking. This ensures optimistic concurrency so
+             that only one request happens at a time.
+            
+             The fingerprint is initially generated by Deployment Manager and changes after every request to modify data.
+             To get the latest fingerprint value, perform a get() request to a deployment.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Deployment.InsertTime">
+            <summary>Output only. Creation timestamp in RFC3339 text format.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Deployment.Labels">
+            <summary>Map of labels; provided by the client when the resource is created or updated. Specifically: Label
+            keys must be between 1 and 63 characters long and must conform to the following regular expression:
+            [a-z]([-a-z0-9]*[a-z0-9])? Label values must be between 0 and 63 characters long and must conform to the
+            regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Deployment.Manifest">
+            <summary>Output only. URL of the manifest representing the last manifest that was successfully
+            deployed.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Deployment.Name">
+            <summary>Name of the resource; provided by the client when the resource is created. The name must be 1-63
+            characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the
+            regular expression [a-z]([-a-z0-9]*[a-z0-9])? which means the first character must be a lowercase letter,
+            and all following characters must be a dash, lowercase letter, or digit, except the last character, which
+            cannot be a dash.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Deployment.Operation">
+            <summary>Output only. The Operation that most recently ran, or is currently running, on this
+            deployment.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Deployment.SelfLink">
+            <summary>Output only. Server defined URL for the resource.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Deployment.Target">
+            <summary>[Input Only] The parameters that define your deployment, including the deployment configuration and
+            relevant templates.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Deployment.Update">
+            <summary>Output only. If Deployment Manager is currently updating or previewing an update to this
+            deployment, the updated configuration appears here.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Deployment.UpdateTime">
+            <summary>Output only. Update timestamp in RFC3339 text format.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Deployment.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.DeploymentLabelEntry.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.DeploymentUpdate.Description">
+            <summary>Output only. An optional user-provided description of the deployment after the current update has
+            been applied.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.DeploymentUpdate.Labels">
+            <summary>Output only. Map of labels; provided by the client when the resource is created or updated.
+            Specifically: Label keys must be between 1 and 63 characters long and must conform to the following regular
+            expression: [a-z]([-a-z0-9]*[a-z0-9])? Label values must be between 0 and 63 characters long and must
+            conform to the regular expression ([a-z]([-a-z0-9]*[a-z0-9])?)?</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.DeploymentUpdate.Manifest">
+            <summary>Output only. URL of the manifest representing the update configuration of this
+            deployment.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.DeploymentUpdate.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.DeploymentUpdateLabelEntry.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.DeploymentsCancelPreviewRequest.Fingerprint">
+             <summary>Specifies a fingerprint for cancelPreview() requests. A fingerprint is a randomly generated value
+             that must be provided in cancelPreview() requests to perform optimistic locking. This ensures optimistic
+             concurrency so that the deployment does not have conflicting requests (e.g. if someone attempts to make a
+             new update request while another user attempts to cancel a preview, this would prevent one of the requests).
+            
+             The fingerprint is initially generated by Deployment Manager and changes after every request to modify a
+             deployment. To get the latest fingerprint value, perform a get() request on the deployment.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.DeploymentsCancelPreviewRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.DeploymentsListResponse">
+            <summary>A response containing a partial list of deployments and a page token used to build the next request if
+            the request has been truncated.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.DeploymentsListResponse.Deployments">
+            <summary>Output only. The deployments contained in this response.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.DeploymentsListResponse.NextPageToken">
+            <summary>Output only. A token used to continue a truncated list request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.DeploymentsListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.DeploymentsStopRequest.Fingerprint">
+             <summary>Specifies a fingerprint for stop() requests. A fingerprint is a randomly generated value that must
+             be provided in stop() requests to perform optimistic locking. This ensures optimistic concurrency so that
+             the deployment does not have conflicting requests (e.g. if someone attempts to make a new update request
+             while another user attempts to stop an ongoing update request, this would prevent a collision).
+            
+             The fingerprint is initially generated by Deployment Manager and changes after every request to modify a
+             deployment. To get the latest fingerprint value, perform a get() request on the deployment.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.DeploymentsStopRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.Expr">
+             <summary>Represents an expression text. Example:
+            
+             title: "User account presence" description: "Determines whether the request has a user account" expression:
+             "size(request.user) > 0"</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Expr.Description">
+            <summary>An optional description of the expression. This is a longer text which describes the expression,
+            e.g. when hovered over it in a UI.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Expr.Expression">
+             <summary>Textual representation of an expression in Common Expression Language syntax.
+            
+             The application context of the containing message determines which well-known feature set of CEL is
+             supported.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Expr.Location">
+            <summary>An optional string indicating the location of the expression for error reporting, e.g. a file name
+            and a position in the file.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Expr.Title">
+            <summary>An optional title for the expression, i.e. a short string describing its purpose. This can be used
+            e.g. in UIs which allow to enter the expression.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Expr.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.GlobalSetPolicyRequest.Bindings">
+            <summary>Flatten Policy to create a backward compatible wire-format. Deprecated. Use 'policy' to specify
+            bindings.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.GlobalSetPolicyRequest.ETag">
+            <summary>Flatten Policy to create a backward compatible wire-format. Deprecated. Use 'policy' to specify the
+            etag.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.GlobalSetPolicyRequest.Policy">
+            <summary>REQUIRED: The complete policy to be applied to the 'resource'. The size of the policy is limited to
+            a few 10s of KB. An empty policy is in general a valid policy but certain services (like Projects) might
+            reject them.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ImportFile.Content">
+            <summary>The contents of the file.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ImportFile.Name">
+            <summary>The name of the file.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ImportFile.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.LogConfig">
+            <summary>Specifies what kind of log the caller must write</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.LogConfig.CloudAudit">
+            <summary>Cloud audit options.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.LogConfig.Counter">
+            <summary>Counter options.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.LogConfig.DataAccess">
+            <summary>Data access options.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.LogConfig.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.LogConfigCloudAuditOptions">
+            <summary>Write a Cloud Audit log</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.LogConfigCloudAuditOptions.AuthorizationLoggingOptions">
+            <summary>Information used by the Cloud Audit Logging pipeline.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.LogConfigCloudAuditOptions.LogName">
+            <summary>The log_name to populate in the Cloud Audit Record.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.LogConfigCloudAuditOptions.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.LogConfigCounterOptions">
+             <summary>Increment a streamz counter with the specified metric and field names.
+            
+             Metric names should start with a '/', generally be lowercase-only, and end in "_count". Field names should not
+             contain an initial slash. The actual exported metric names will have "/iam/policy" prepended.
+            
+             Field names correspond to IAM request parameters and field values are their respective values.
+            
+             Supported field names: - "authority", which is "[token]" if IAMContext.token is present, otherwise the value of
+             IAMContext.authority_selector if present, and otherwise a representation of IAMContext.principal; or -
+             "iam_principal", a representation of IAMContext.principal even if a token or authority selector is present; or -
+             "" (empty string), resulting in a counter with no fields.
+            
+             Examples: counter { metric: "/debug_access_count" field: "iam_principal" } ==> increment counter
+             /iam/policy/backend_debug_access_count {iam_principal=[value of IAMContext.principal]}
+            
+             At this time we do not support multiple field names (though this may be supported in the future).</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.LogConfigCounterOptions.Field">
+            <summary>The field value to attribute.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.LogConfigCounterOptions.Metric">
+            <summary>The metric to update.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.LogConfigCounterOptions.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.LogConfigDataAccessOptions">
+            <summary>Write a Data Access (Gin) log</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.LogConfigDataAccessOptions.LogMode">
+             <summary>Whether Gin logging should happen in a fail-closed manner at the caller. This is relevant only in
+             the LocalIAM implementation, for now.
+            
+             NOTE: Logging to Gin in a fail-closed manner is currently unsupported while work is being done to satisfy
+             the requirements of go/345. Currently, setting LOG_FAIL_CLOSED mode will have no effect, but still exists
+             because there is active work being done to support it (b/115874152).</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.LogConfigDataAccessOptions.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Manifest.Config">
+            <summary>Output only. The YAML configuration for this manifest.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Manifest.ExpandedConfig">
+            <summary>Output only. The fully-expanded configuration file, including any templates and
+            references.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Manifest.Imports">
+            <summary>Output only. The imported files for this manifest.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Manifest.InsertTime">
+            <summary>Output only. Creation timestamp in RFC3339 text format.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Manifest.Layout">
+            <summary>Output only. The YAML layout for this manifest.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Manifest.Name">
+             <summary>Output only.
+            
+             The name of the manifest.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Manifest.SelfLink">
+            <summary>Output only. Self link for the manifest.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Manifest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.ManifestsListResponse">
+            <summary>A response containing a partial list of manifests and a page token used to build the next request if
+            the request has been truncated.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ManifestsListResponse.Manifests">
+            <summary>Output only. Manifests contained in this list response.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ManifestsListResponse.NextPageToken">
+            <summary>Output only. A token used to continue a truncated list request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ManifestsListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.Operation">
+            <summary>An Operation resource, used to manage asynchronous API requests. (== resource_for v1.globalOperations
+            ==) (== resource_for beta.globalOperations ==) (== resource_for v1.regionOperations ==) (== resource_for
+            beta.regionOperations ==) (== resource_for v1.zoneOperations ==) (== resource_for beta.zoneOperations
+            ==)</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.ClientOperationId">
+            <summary>[Output Only] The value of `requestId` if you provided it in the request. Not present
+            otherwise.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.CreationTimestamp">
+            <summary>[Deprecated] This field is deprecated.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.Description">
+            <summary>[Output Only] A textual description of the operation, which is set when the operation is
+            created.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.EndTime">
+            <summary>[Output Only] The time that this operation was completed. This value is in RFC3339 text
+            format.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.Error">
+            <summary>[Output Only] If errors are generated during processing of the operation, this field will be
+            populated.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.HttpErrorMessage">
+            <summary>[Output Only] If the operation fails, this field contains the HTTP error message that was returned,
+            such as NOT FOUND.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.HttpErrorStatusCode">
+            <summary>[Output Only] If the operation fails, this field contains the HTTP error status code that was
+            returned. For example, a 404 means the resource was not found.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.Id">
+            <summary>[Output Only] The unique identifier for the resource. This identifier is defined by the
+            server.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.InsertTime">
+            <summary>[Output Only] The time that this operation was requested. This value is in RFC3339 text
+            format.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.Kind">
+            <summary>[Output Only] Type of the resource. Always compute#operation for Operation resources.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.Name">
+            <summary>[Output Only] Name of the resource.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.OperationType">
+            <summary>[Output Only] The type of operation, such as insert, update, or delete, and so on.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.Progress">
+            <summary>[Output Only] An optional progress indicator that ranges from 0 to 100. There is no requirement
+            that this be linear or support any granularity of operations. This should not be used to guess when the
+            operation will be complete. This number should monotonically increase as the operation progresses.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.Region">
+            <summary>[Output Only] The URL of the region where the operation resides. Only available when performing
+            regional operations. You must specify this field as part of the HTTP request URL. It is not settable as a
+            field in the request body.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.SelfLink">
+            <summary>[Output Only] Server-defined URL for the resource.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.StartTime">
+            <summary>[Output Only] The time that this operation was started by the server. This value is in RFC3339 text
+            format.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.Status">
+            <summary>[Output Only] The status of the operation, which can be one of the following: PENDING, RUNNING, or
+            DONE.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.StatusMessage">
+            <summary>[Output Only] An optional textual description of the current status of the operation.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.TargetId">
+            <summary>[Output Only] The unique target ID, which identifies a specific incarnation of the target
+            resource.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.TargetLink">
+            <summary>[Output Only] The URL of the resource that the operation modifies. For operations related to
+            creating a snapshot, this points to the persistent disk that the snapshot was created from.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.User">
+            <summary>[Output Only] User who requested the operation, for example: user@example.com.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.Warnings">
+            <summary>[Output Only] If warning messages are generated during processing of the operation, this field will
+            be populated.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.Zone">
+            <summary>[Output Only] The URL of the zone where the operation resides. Only available when performing per-
+            zone operations. You must specify this field as part of the HTTP request URL. It is not settable as a field
+            in the request body.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.Operation.ErrorData">
+            <summary>[Output Only] If errors are generated during processing of the operation, this field will be
+            populated.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.ErrorData.Errors">
+            <summary>[Output Only] The array of errors encountered while processing this operation.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.ErrorData.ErrorsData.Code">
+            <summary>[Output Only] The error type identifier for this error.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.ErrorData.ErrorsData.Location">
+            <summary>[Output Only] Indicates the field in the request that caused the error. This property is
+            optional.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.ErrorData.ErrorsData.Message">
+            <summary>[Output Only] An optional, human-readable error message.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.WarningsData.Code">
+            <summary>[Output Only] A warning code, if applicable. For example, Compute Engine returns
+            NO_RESULTS_ON_PAGE if there are no results in the response.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.WarningsData.Data">
+            <summary>[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
+            "scope", "value": "zones/us-east1-d" }</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.WarningsData.Message">
+            <summary>[Output Only] A human-readable description of the warning code.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.WarningsData.DataData.Key">
+            <summary>[Output Only] A key that provides more detail on the warning being returned. For example,
+            for warnings where there are no results in a list request for a particular zone, this key might be
+            scope and the key value might be the zone name. Other examples might be a key indicating a
+            deprecated resource and a suggested replacement, or a warning about invalid network settings (for
+            example, if an instance attempts to perform IP forwarding but is not enabled for IP
+            forwarding).</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Operation.WarningsData.DataData.Value">
+            <summary>[Output Only] A warning data value corresponding to the key.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.OperationsListResponse">
+            <summary>A response containing a partial list of operations and a page token used to build the next request if
+            the request has been truncated.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.OperationsListResponse.NextPageToken">
+            <summary>Output only. A token used to continue a truncated list request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.OperationsListResponse.Operations">
+            <summary>Output only. Operations contained in this list response.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.OperationsListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.Policy">
+             <summary>Defines an Identity and Access Management (IAM) policy. It is used to specify access control policies
+             for Cloud Platform resources.
+            
+             A `Policy` consists of a list of `bindings`. A `binding` binds a list of `members` to a `role`, where the
+             members can be user accounts, Google groups, Google domains, and service accounts. A `role` is a named list of
+             permissions defined by IAM.
+            
+             **JSON Example**
+            
+             { "bindings": [ { "role": "roles/owner", "members": [ "user:mike@example.com", "group:admins@example.com",
+             "domain:google.com", "serviceAccount:my-other-app@appspot.gserviceaccount.com" ] }, { "role": "roles/viewer",
+             "members": ["user:sean@example.com"] } ] }
+            
+             **YAML Example**
+            
+             bindings: - members: - user:mike@example.com - group:admins@example.com - domain:google.com - serviceAccount:my-
+             other-app@appspot.gserviceaccount.com role: roles/owner - members: - user:sean@example.com role: roles/viewer
+            
+             For a description of IAM and its features, see the [IAM developer's
+             guide](https://cloud.google.com/iam/docs).</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Policy.AuditConfigs">
+            <summary>Specifies cloud audit logging configuration for this policy.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Policy.Bindings">
+            <summary>Associates a list of `members` to a `role`. `bindings` with no members will result in an
+            error.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Policy.ETag">
+             <summary>`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of
+             a policy from overwriting each other. It is strongly suggested that systems make use of the `etag` in the
+             read-modify-write cycle to perform policy updates in order to avoid race conditions: An `etag` is returned
+             in the response to `getIamPolicy`, and systems are expected to put that etag in the request to
+             `setIamPolicy` to ensure that their change will be applied to the same version of the policy.
+            
+             If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is overwritten
+             blindly.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Policy.Rules">
+            <summary>If more than one rule is specified, the rules are applied in the following manner: - All matching
+            LOG rules are always applied. - If any DENY/DENY_WITH_LOG rule matches, permission is denied. Logging will
+            be applied if one or more matching rule requires logging. - Otherwise, if any ALLOW/ALLOW_WITH_LOG rule
+            matches, permission is granted. Logging will be applied if one or more matching rule requires logging. -
+            Otherwise, if no rule applies, permission is denied.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Policy.Version">
+            <summary>Deprecated.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.AccessControl">
+            <summary>The Access Control Policy set on this resource.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.FinalProperties">
+            <summary>Output only. The evaluated properties of the resource with references expanded. Returned as
+            serialized YAML.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.InsertTime">
+            <summary>Output only. Creation timestamp in RFC3339 text format.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.Manifest">
+            <summary>Output only. URL of the manifest representing the current configuration of this resource.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.Name">
+            <summary>Output only. The name of the resource as it appears in the YAML config.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.Properties">
+            <summary>Output only. The current properties of the resource before any references have been filled in.
+            Returned as serialized YAML.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.Type">
+            <summary>Output only. The type of the resource, for example compute.v1.instance, or
+            cloudfunctions.v1beta1.function.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.Update">
+            <summary>Output only. If Deployment Manager is currently updating or previewing an update to this resource,
+            the updated configuration appears here.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.UpdateTime">
+            <summary>Output only. Update timestamp in RFC3339 text format.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.Url">
+            <summary>Output only. The URL of the actual resource.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.Warnings">
+            <summary>Output only. If warning messages are generated during processing of this resource, this field will
+            be populated.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.WarningsData.Code">
+            <summary>[Output Only] A warning code, if applicable. For example, Compute Engine returns
+            NO_RESULTS_ON_PAGE if there are no results in the response.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.WarningsData.Data">
+            <summary>[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
+            "scope", "value": "zones/us-east1-d" }</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.WarningsData.Message">
+            <summary>[Output Only] A human-readable description of the warning code.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.WarningsData.DataData.Key">
+            <summary>[Output Only] A key that provides more detail on the warning being returned. For example,
+            for warnings where there are no results in a list request for a particular zone, this key might be
+            scope and the key value might be the zone name. Other examples might be a key indicating a
+            deprecated resource and a suggested replacement, or a warning about invalid network settings (for
+            example, if an instance attempts to perform IP forwarding but is not enabled for IP
+            forwarding).</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Resource.WarningsData.DataData.Value">
+            <summary>[Output Only] A warning data value corresponding to the key.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.ResourceAccessControl">
+            <summary>The access controls set on the resource.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceAccessControl.GcpIamPolicy">
+            <summary>The GCP IAM Policy to set on the resource.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceAccessControl.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.AccessControl">
+            <summary>The Access Control Policy to set on this resource after updating the resource itself.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.Error">
+            <summary>Output only. If errors are generated during update of the resource, this field will be
+            populated.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.FinalProperties">
+            <summary>Output only. The expanded properties of the resource with reference values expanded. Returned as
+            serialized YAML.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.Intent">
+            <summary>Output only. The intent of the resource: PREVIEW, UPDATE, or CANCEL.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.Manifest">
+            <summary>Output only. URL of the manifest representing the update configuration of this resource.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.Properties">
+            <summary>Output only. The set of updated properties for this resource, before references are expanded.
+            Returned as serialized YAML.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.State">
+            <summary>Output only. The state of the resource.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.Warnings">
+            <summary>Output only. If warning messages are generated during processing of this resource, this field will
+            be populated.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.ErrorData">
+            <summary>Output only. If errors are generated during update of the resource, this field will be
+            populated.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.ErrorData.Errors">
+            <summary>[Output Only] The array of errors encountered while processing this operation.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.ErrorData.ErrorsData.Code">
+            <summary>[Output Only] The error type identifier for this error.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.ErrorData.ErrorsData.Location">
+            <summary>[Output Only] Indicates the field in the request that caused the error. This property is
+            optional.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.ErrorData.ErrorsData.Message">
+            <summary>[Output Only] An optional, human-readable error message.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.WarningsData.Code">
+            <summary>[Output Only] A warning code, if applicable. For example, Compute Engine returns
+            NO_RESULTS_ON_PAGE if there are no results in the response.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.WarningsData.Data">
+            <summary>[Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
+            "scope", "value": "zones/us-east1-d" }</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.WarningsData.Message">
+            <summary>[Output Only] A human-readable description of the warning code.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.WarningsData.DataData.Key">
+            <summary>[Output Only] A key that provides more detail on the warning being returned. For example,
+            for warnings where there are no results in a list request for a particular zone, this key might be
+            scope and the key value might be the zone name. Other examples might be a key indicating a
+            deprecated resource and a suggested replacement, or a warning about invalid network settings (for
+            example, if an instance attempts to perform IP forwarding but is not enabled for IP
+            forwarding).</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourceUpdate.WarningsData.DataData.Value">
+            <summary>[Output Only] A warning data value corresponding to the key.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.ResourcesListResponse">
+            <summary>A response containing a partial list of resources and a page token used to build the next request if
+            the request has been truncated.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourcesListResponse.NextPageToken">
+            <summary>A token used to continue a truncated list request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourcesListResponse.Resources">
+            <summary>Resources contained in this list response.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.ResourcesListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.Rule">
+            <summary>A rule to be applied in a Policy.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Rule.Action">
+            <summary>Required</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Rule.Conditions">
+            <summary>Additional restrictions that must be met. All conditions must pass for the rule to match.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Rule.Description">
+            <summary>Human-readable description of the rule.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Rule.Ins">
+            <summary>If one or more 'in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR is
+            in at least one of these entries.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Rule.LogConfigs">
+            <summary>The config returned to callers of tech.iam.IAM.CheckPolicy for any entries that match the LOG
+            action.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Rule.NotIns">
+            <summary>If one or more 'not_in' clauses are specified, the rule matches if the PRINCIPAL/AUTHORITY_SELECTOR
+            is in none of the entries.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Rule.Permissions">
+            <summary>A permission is a string of form '..' (e.g., 'storage.buckets.list'). A value of '*' matches all
+            permissions, and a verb part of '*' (e.g., 'storage.buckets.*') matches all verbs.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Rule.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.TargetConfiguration.Config">
+            <summary>The configuration to use for this deployment.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.TargetConfiguration.Imports">
+            <summary>Specifies any files to import for this configuration. This can be used to import templates or other
+            files. For example, you might import a text file in order to use the file in a template.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.TargetConfiguration.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.TestPermissionsRequest.Permissions">
+            <summary>The set of permissions to check for the 'resource'. Permissions with wildcards (such as '*' or
+            'storage.*') are not allowed.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.TestPermissionsRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.TestPermissionsResponse.Permissions">
+            <summary>A subset of `TestPermissionsRequest.permissions` that the caller is allowed.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.TestPermissionsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.Type">
+            <summary>A resource type supported by Deployment Manager.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Type.InsertTime">
+            <summary>Output only. Creation timestamp in RFC3339 text format.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Type.Name">
+            <summary>Name of the type.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Type.Operation">
+            <summary>Output only. The Operation that most recently ran, or is currently running, on this type.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Type.SelfLink">
+            <summary>Output only. Server defined URL for the resource.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.Type.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.DeploymentManager.v2.Data.TypesListResponse">
+            <summary>A response that returns all Types supported by Deployment Manager</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.TypesListResponse.NextPageToken">
+            <summary>A token used to continue a truncated list request.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.TypesListResponse.Types">
+            <summary>Output only. A list of resource types supported by Deployment Manager.</summary>
+        </member>
+        <member name="P:Google.Apis.DeploymentManager.v2.Data.TypesListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+    </members>
+</doc>
