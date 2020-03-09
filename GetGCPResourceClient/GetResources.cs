@@ -17,7 +17,7 @@ namespace GetGCPResourceClient
 {
     public class GetResources
     {
-        private static readonly ILog log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        public static ILog log = LogManager.GetLogger(typeof(GetResources));
 
         /// <summary>
         /// Snaps the Routes.

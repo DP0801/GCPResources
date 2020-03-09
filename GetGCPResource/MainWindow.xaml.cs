@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace GetGCPResource
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static ILog log = LogManager.GetLogger(typeof(MainWindow));
         public MainWindow()
         {
             InitializeComponent();
+            log.InfoFormat("Infomarion: {0}", "Project is started..");
         }
     }
 }
