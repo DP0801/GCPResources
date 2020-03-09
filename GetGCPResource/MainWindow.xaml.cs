@@ -25,7 +25,7 @@ namespace GetGCPResource
         public MainWindow()
         {
             InitializeComponent();
-            log.InfoFormat("Infomarion: {0}", "Project is started..");
+            log.InfoFormat("Infomarion: {0}", "Project is started.");
         }
     }
 }

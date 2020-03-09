@@ -1,3 +1,7 @@
 # ignore node/grunt dependency directories
 packages/
 .vs/
+GetGCPResource/bin
+GetGCPResource/obj
+bin/
+obj/
